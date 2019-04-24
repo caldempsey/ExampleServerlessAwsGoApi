@@ -5,8 +5,10 @@ frameworkVersion: ">=1.28.0 <2.0.0"
 provider:
   name: aws
   runtime: go1.x
-  stage: ${opt:stage, 'dev'}
   region: us-east-1
+  # Use stage from options first, if it doesn't exist, then use the default value from provider.stage.
+  custom:
+    stage: "${opt:stage, self:provider.stage}"
 
 plugins:
   - serverless-plugin-warmup

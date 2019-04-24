@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: example-aws-serverless-api
+Resources:
+  lambda_1:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bin/lambda1/main
+      Runtime: go1.x
+      Events:
+        SampleEvent:
+          Type: Api
+          Properties:
+            Path: /lambda1
+            Method: get
+  lambda_2:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bin/lambda2/main
+      Runtime: go1.x
+      Events:
+        SampleEvent:
+          Type: Api
+          Properties:
+            Path: /lambda2
+            Method: get
