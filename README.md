@@ -27,4 +27,4 @@ Skip to step 3 if you just want to build a binary without any additional develop
 ## Guide to building a Lambda
 
 1. Run `npm install && make` (Unix).
-2. Push to a stage. This will push the compiled binary to AWS. Do not push without specifying a stage. You should know serverless framework well enough if you get this far.
+2. Push your lambda with `sls deploy`. This will push the compiled binary to AWS. Do not push without specifying a stage. You should know serverless framework well enough if you get this far.
