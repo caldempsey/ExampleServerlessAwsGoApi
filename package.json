@@ -1,0 +1,9 @@
+{
+  "name": "example-serverless-aws-golang-api",
+  "version": "0.0.1",
+  "description": "Port of api/ at root directory.",
+  "author": "Callum Dempsey Leach <callum.leach@hotmail.co.uk",
+  "devDependencies": {
+    "serverless-plugin-warmup": "^4.4.3-rc.1"
+  }
+}
